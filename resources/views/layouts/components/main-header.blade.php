@@ -6,13 +6,13 @@
             <!-- sidebar-toggle-->
             <a class="logo-horizontal" href="{{url('index')}}">
                 <img src="{{asset('build/assets/images/brand/logo.png')}}" class="header-brand-img main-logo"
-                     alt="Sparic logo">
+                     alt="Cañita logo">
                 <img src="{{asset('build/assets/images/brand/logo-light.png')}}" class="header-brand-img darklogo"
-                     alt="Sparic logo">
+                     alt="Cañita logo">
             </a>
             <!-- LOGO -->
             <div class="main-header-center ms-3 d-none d-lg-block">
-                <input type="text" class="form-control" id="typehead" placeholder="Search for results..."
+                <input type="text" class="form-control" id="typehead" placeholder="Buscar resultados..."
                        autocomplete="off">
                 <button class="btn px-2"><i class="fe fe-search" aria-hidden="true"></i></button>
             </div>
@@ -23,7 +23,7 @@
                     </a>
                     <div class="dropdown-menu header-search dropdown-menu-start">
                         <div class="input-group w-100 p-2">
-                            <input type="text" class="form-control" placeholder="Search....">
+                            <input type="text" class="form-control" placeholder="Buscar....">
                             <div class="input-group-text btn btn-primary">
                                 <i class="fe fe-search" aria-hidden="true"></i>
                             </div>
@@ -42,19 +42,19 @@
                         <div class="d-flex order-lg-2">
                             <div class="dropdown d-lg-none d-flex">
                                 <a href="javascript:void(0)" class="nav-link icon"
-                                   data-bs-toggle="dropdown">
+                                    data-bs-toggle="dropdown">
                                     <i class="fe fe-search"></i>
                                 </a>
                                 <div class="dropdown-menu header-search dropdown-menu-start">
                                     <div class="input-group w-100 p-2">
-                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <input type="text" class="form-control" placeholder="Buscar....">
                                         <div class="input-group-text btn btn-primary">
                                             <i class="fa fa-search" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="dropdown d-flex country">
+                            <!-- <div class="dropdown d-flex country">
                                 <a class="nav-link icon text-center" data-bs-toggle="dropdown">
                                     <i class="ri-global-line"></i>
                                 </a>
@@ -79,7 +79,7 @@
                                             class=" me-2 country language-img"> <span
                                             class="fs-13 text-wrap text-dark fw-semibold"> Canada</span> </a>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- COUNTRY -->
                             <div class="d-flex country">
                                 <a class="nav-link icon theme-layout nav-link-bg layout-setting">
@@ -88,7 +88,7 @@
                                 </a>
                             </div>
                             <!-- Theme-Layout -->
-                            <div class="dropdown d-flex shopping-cart">
+                            <!-- <div class="dropdown d-flex shopping-cart">
                                 <a class="nav-link icon text-center" data-bs-toggle="dropdown">
                                     <i class="ri-shopping-bag-line"></i><span
                                         class="badge bg-secondary header-badge">4</span>
@@ -201,13 +201,13 @@
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="dropdown-footer d-felx justify-content-between align-items-center">
                                         <a class="btn btn-primary btn-pill btn-sm"
-                                           href="{{url('checkout')}}"><i class="fe fe-check-circle"></i>
+                                            href="{{url('checkout')}}"><i class="fe fe-check-circle"></i>
                                             CHECKOUT</a>
                                         <span class="float-end fs-17 fw-semibold text-dark"><span
                                                 class="text-muted-dark">Total:</span> $4206</span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- CART -->
                             <div class="dropdown d-flex">
                                 <a class="nav-link icon full-screen-link" id="fullscreen-button">
@@ -215,7 +215,7 @@
                                 </a>
                             </div>
                             <!-- FULL-SCREEN -->
-                            <div class="dropdown d-flex notifications nav-link-notify">
+                            <!-- <div class="dropdown d-flex notifications nav-link-notify">
                                 <a class="nav-link icon" data-bs-toggle="dropdown"><i
                                         class="ri-notification-line"></i><span class=" pulse"></span>
                                 </a>
@@ -297,9 +297,9 @@
                                            href="{{url('notify-list')}}">VIEW ALL NOTIFICATIONS</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- NOTIFICATIONS -->
-                            <div class="dropdown d-flex message">
+                            <!-- <div class="dropdown d-flex message">
                                 <a class="nav-link icon text-center" data-bs-toggle="dropdown">
                                     <i class="ri-chat-1-line"></i><span class="pulse-danger"></span>
                                 </a>
@@ -393,14 +393,14 @@
                                             ALL AS READ</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- MESSAGE-BOX -->
-                            <div class="dropdown d-flex header-settings">
+                            <!-- <div class="dropdown d-flex header-settings">
                                 <a class="nav-link icon siderbar-link" data-bs-toggle="sidebar-right"
                                    data-bs-target=".sidebar-right">
                                     <i class="ri-menu-fold-fill"></i>
                                 </a>
-                            </div>
+                            </div> -->
                             <!-- SIDE-MENU -->
                             <div class="dropdown d-flex profile-1">
                                 <a href="javascript:void(0)" data-bs-toggle="dropdown"
@@ -412,27 +412,20 @@
                                      data-bs-popper="none">
                                     <div class="drop-heading">
                                         <div class="text-center">
-                                            <h5 class="text-dark mb-0 fw-semibold">Alison</h5>
-                                            <span class="text-muted fs-12">Administrator</span>
+                                            <h5 class="text-dark mb-0 fw-semibold">Julio</h5>
+                                            <span class="text-muted fs-12">Administrador</span>
                                         </div>
                                     </div>
                                     <a class="dropdown-item text-dark fw-semibold border-top" href="{{url('profile')}}">
-                                        <i class="dropdown-icon fe fe-user"></i> Profile
+                                        <i class="dropdown-icon fe fe-user"></i> Perfil
                                     </a>
-                                    <a class="dropdown-item text-dark fw-semibold" href="{{url('email-inbox')}}">
-                                        <i class="dropdown-icon fe fe-mail"></i> Inbox
-                                        <span class="badge bg-success float-end">3</span>
-                                    </a>
+
                                     <a class="dropdown-item text-dark fw-semibold" href="{{url('settings')}}">
-                                        <i class="dropdown-icon fe fe-settings"></i> Settings
+                                        <i class="dropdown-icon fe fe-settings"></i>Configuración
                                     </a>
-                                    <a class="dropdown-item text-dark fw-semibold" href="{{url('faq')}}">
-                                        <i class="dropdown-icon fe fe-alert-triangle"></i>
-                                        Support ?
-                                    </a>
+
                                     <a class="dropdown-item text-dark fw-semibold" href="{{url('login')}}">
-                                        <i class="dropdown-icon fe fe-log-out"></i> Sign
-                                        out
+                                        <i class="dropdown-icon fe fe-log-out"></i> Cerrar Sesión
                                     </a>
                                 </div>
                             </div>

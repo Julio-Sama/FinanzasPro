@@ -64,8 +64,8 @@
                                             </a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="javascript:"
-                                               onclick="cargar_datos_eliminar_categoria('{{ $categoria->nom_categoria }}', '{{ $categoria->id_categoria }}')"
-                                               data-bs-toggle="modal" data-bs-target="#modal_eliminar_categoria">
+                                            onclick="cargar_datos_eliminar_categoria('{{ $categoria->nom_categoria }}', '{{ $categoria->id_categoria }}')"
+                                            data-bs-toggle="modal" data-bs-target="#modal_eliminar_categoria">
                                                 <i class='bx bx-trash'></i> Eliminar
                                             </a>
                                         </div>

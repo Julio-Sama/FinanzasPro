@@ -27,7 +27,7 @@
                 </li>
 
                 <li class="slide">
-                    <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                    <a class="side-menu__item" data-bs-toggle="slide" href="{{url('index')}}"><i
                             class="side-menu__icon bx bx-home"></i><span
                             class="side-menu__label">Inicio</span>
                     </a>

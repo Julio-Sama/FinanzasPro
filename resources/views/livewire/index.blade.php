@@ -10,10 +10,10 @@
                             <div class="page-header d-sm-flex d-block">
                                 <ol class="breadcrumb mb-sm-0 mb-3">
                                     <!-- breadcrumb -->
-                                    <li class="breadcrumb-item"><a href="{{url('index')}}">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Dashboard01</li>
+                                    <li class="breadcrumb-item"><a href="{{url('index')}}">Inicio</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Panel de control</li>
                                 </ol><!-- End breadcrumb -->
-                                <div class="ms-auto">
+                                <!-- <div class="ms-auto">
                                     <div>
                                         <a href="javascript:void(0);" class="btn bg-secondary-transparent text-secondary btn-sm"
                                             data-bs-toggle="tooltip" title="" data-bs-placement="bottom"
@@ -36,7 +36,7 @@
                                             </span>
                                         </a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <!-- END PAGE HEADER -->
 
@@ -49,9 +49,9 @@
                                                 <div class="col-12">
                                                     <div class="d-flex justify-content-between">
                                                         <div>
-                                                            <p class="mb-0 fw-semibold text-dark lh-1">Projects</p>
-                                                            <div class="fs-12 text-muted mb-5">Overview of this month</div>
-                                                            <div class="fs-30 fw-semibold mb-0 lh-1">3,456
+                                                            <p class="mb-0 fw-semibold text-dark lh-1">Productos</p>
+                                                            <div class="fs-12 text-muted mb-5">Productos ingresados este mes</div>
+                                                            <div class="fs-30 fw-semibold mb-0 lh-1">1,456
                                                             </div>
                                                         </div>
                                                         <div class="text-end d-flex flex-column align-items-center">
@@ -77,9 +77,9 @@
                                                 <div class="col-12">
                                                     <div class="d-flex justify-content-between">
                                                         <div>
-                                                            <p class="mb-0 fw-semibold text-dark lh-1">Employees</p>
-                                                            <div class="fs-12 text-muted mb-5">Overview of this month</div>
-                                                            <div class="fs-30 fw-semibold mb-0 lh-1">4,738
+                                                            <p class="mb-0 fw-semibold text-dark lh-1">Empleados</p>
+                                                            <div class="fs-12 text-muted mb-5">Empleados ingresados este mes</div>
+                                                            <div class="fs-30 fw-semibold mb-0 lh-1">38
                                                             </div>
                                                         </div>
                                                         <div class="text-end d-flex flex-column align-items-center">
@@ -105,9 +105,9 @@
                                                 <div class="col-12">
                                                     <div class="d-flex justify-content-between">
                                                         <div>
-                                                            <p class="mb-0 fw-semibold text-dark lh-1">Task</p>
-                                                            <div class="fs-12 text-muted mb-5">Overview of this month</div>
-                                                            <div class="fs-30 fw-semibold mb-0 lh-1">6,738
+                                                            <p class="mb-0 fw-semibold text-dark lh-1">Facturado</p>
+                                                            <div class="fs-12 text-muted mb-5">Facturaciones de este mes</div>
+                                                            <div class="fs-30 fw-semibold mb-0 lh-1">1,738
                                                             </div>
                                                         </div>
                                                         <div class="text-end d-flex flex-column align-items-center">
@@ -133,8 +133,8 @@
                                                 <div class="col-12">
                                                     <div class="d-flex justify-content-between">
                                                         <div>
-                                                            <p class="mb-0 fw-semibold text-dark lh-1">Earnings</p>
-                                                            <div class="fs-12 text-muted mb-5">Overview of this month</div>
+                                                            <p class="mb-0 fw-semibold text-dark lh-1">Ganancias</p>
+                                                            <div class="fs-12 text-muted mb-5">Resumen de este mes</div>
                                                             <div class="fs-30 fw-semibold mb-0 lh-1">$8,963 <i class=""></i>
                                                             </div>
                                                         </div>
@@ -166,14 +166,14 @@
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <div class="col">
-                                                            <p class="mb-0 fw-semibold text-muted-dark">Total
-                                                                Purchase</p>
+                                                            <p class="mb-0 fw-semibold text-muted-dark">Compras
+                                                                Totales</p>
                                                             <h3 class="mt-2 mb-1 text-dark fw-semibold">
                                                                 $7,483</h3>
                                                             <p class="text-muted fs-12 mb-0"><span
                                                                     class="text-body fw-semibold"><i
                                                                         class="fa fa-arrow-up text-success me-1"> </i>23%
-                                                                </span> in this year</p>
+                                                                </span> en este año</p>
                                                         </div>
                                                         <div class="col mt-3 col-auto">
                                                             <span>
@@ -192,14 +192,14 @@
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <div class="col">
-                                                            <p class="mb-0 fw-semibold  text-muted-dark">Total
-                                                                Orders</p>
+                                                            <p class="mb-0 fw-semibold  text-muted-dark">Ordenes
+                                                                Totales</p>
                                                             <h3 class="mt-2 mb-1 text-dark fw-semibold">
                                                                 65,457</h3>
                                                             <p class="text-muted fs-12 mb-0"><span
                                                                     class="text-body fw-semibold"><i
                                                                         class="fa fa-arrow-up text-success me-1"> </i>13%
-                                                                </span> in this year</p>
+                                                                </span> en este año</p>
                                                         </div>
                                                         <div class="col mt-3 col-auto">
                                                             <span>
@@ -218,14 +218,14 @@
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <div class="col">
-                                                            <p class="mb-0 fw-semibold text-muted-dark">Total
-                                                                Sales</p>
+                                                            <p class="mb-0 fw-semibold text-muted-dark">Ventas
+                                                                Totales</p>
                                                             <h3 class="mt-2 mb-1 text-dark fw-semibold">
                                                                 $6,128</h3>
                                                             <p class="text-muted fs-12 mb-0"><span
                                                                     class="text-body fw-semibold"><i
                                                                         class="fa fa-arrow-down text-danger me-1"> </i>12%
-                                                                </span> in this year</p>
+                                                                </span> en este año</p>
                                                         </div>
                                                         <div class="col mt-3 col-auto">
                                                             <span>
@@ -242,7 +242,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card overflow-hidden">
+                                    <!-- <div class="card overflow-hidden">
                                         <div class="card-header border-bottom d-block d-sm-flex">
                                             <h3 class="card-title mb-3 mb-sm-0">Sales Overview</h3>
                                             <div class="ms-auto">
@@ -255,9 +255,9 @@
                                         <div class="card-body">
                                             <div id="timeline-chart"></div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <div class="col-xxl-5 col-lg-12 col-md-12">
+                                <!-- <div class="col-xxl-5 col-lg-12 col-md-12">
                                     <div class="card d-inline-block overflow-hidden">
                                         <div class="card-header border-bottom">
                                             <h3 class="card-title mb-0">Sales Country Wise</h3>
@@ -289,12 +289,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- END ROW -->
 
                             <!-- ROW -->
                             <div class="row row-deck">
-                                <div class="col-xxl-6 col-xl-12 col-lg-12">
+                                <!-- <div class="col-xxl-6 col-xl-12 col-lg-12">
                                     <div class="card d-inline-block overflow-hidden">
                                         <div
                                             class="card-header custom-header">
@@ -437,8 +437,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xxl-3 col-xl-6 col-lg-12 col-md-12">
+                                </div> -->
+                                <!-- <div class="col-xxl-3 col-xl-6 col-lg-12 col-md-12">
                                     <div class="card">
                                         <div
                                             class="card-header border-bottom">
@@ -507,11 +507,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- END ROW -->
 
                             <!-- ROW -->
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-12 col-sm-12">
                                     <div class="card">
                                         <div class="card-header border-bottom ">
@@ -789,7 +789,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- COL END -->
+                                COL END -->
                             </div>
                             <!-- END ROW -->
 

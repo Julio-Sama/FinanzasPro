@@ -7,7 +7,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'>
 
         <!-- TITLE -->
-		<title>Pacholi | Panel de Control</title>
+		<title>Cañita Store | Panel de Control</title>
 
         <!-- FAVICON -->
         <link rel="icon" href="{{asset('build/assets/images/brand/favicon.ico')}}" type="image/x-icon" >

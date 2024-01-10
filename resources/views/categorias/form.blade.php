@@ -11,8 +11,8 @@
         <div class="form-group">
             <label class="form-label">Nombre *</label>
             <input type="text" class="form-control @error('nom_categoria') is-invalid @enderror" name="nom_categoria"
-                   placeholder="-"
-                   value="{{ old('nom_categoria', $categoria->nom_categoria) }}">
+                placeholder="-"
+                value="{{ old('nom_categoria', $categoria->nom_categoria) }}">
 
             @error('nom_categoria')
             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">

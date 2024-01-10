@@ -6,10 +6,10 @@
         <div class="form-group">
             <label class="form-label">Descripción *</label>
             <textarea class="form-control @error('descrip_producto') is-invalid @enderror" name="descrip_producto" rows="1"
-                      placeholder="Nombre / Módelo / Serie / Color">{{ old('descrip_producto', $producto->descrip_producto) }}</textarea>
+                    placeholder="Nombre / Módelo / Serie / Color">{{ old('descrip_producto', $producto->descrip_producto) }}</textarea>
             @error('descrip_producto')
             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                <div data-field="name" data-validator="notEmpty">{{ $message }}</div>
+                <div data-field="name" data-validator="notEmpty"> {{ __('El campo descripción es obligatorio.') }}</div>
             </div>
             @enderror
         </div>
@@ -32,7 +32,7 @@
             </select>
             @error('id_categoria')
             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                <div data-field="name" data-validator="notEmpty">{{ $message }}</div>
+                <div data-field="name" data-validator="notEmpty">{{ __('El campo Categoria es obligatorio.')  }}</div>
             </div>
             @enderror
         </div>
@@ -44,12 +44,12 @@
             <input type="text" class="form-control @error('precio_compra_producto') is-invalid @enderror" name="precio_compra_producto"
                    placeholder="0.00"
                      id="precio_compra_producto"
-                   readonly
+                     readonly
                    value="{{ number_format(old('precio_compra_producto', $producto->precio_compra_producto), 2) }}">
 
             @error('precio_compra_producto')
             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                <div data-field="name" data-validator="notEmpty">{{ $message }}</div>
+                <div data-field="name" data-validator="notEmpty">{{ __('El campo precio compra es obligatorio.')  }}</div>
             </div>
             @enderror
         </div>
@@ -65,7 +65,7 @@
 
             @error('precio_venta_producto')
             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                <div data-field="name" data-validator="notEmpty">{{ $message }}</div>
+                <div data-field="name" data-validator="notEmpty">{{  __('El campo precio venta es obligatorio.')  }}</div>
             </div>
             @enderror
         </div>
@@ -77,12 +77,12 @@
             <input type="text" class="form-control @error('utilidad_producto') is-invalid @enderror" name="utilidad_producto"
                    id="utilidad_producto"
                    placeholder="0.00"
-                     readonly
+                   readonly
                    value="{{ ($producto->precio_venta_producto - $producto->precio_compra_producto) }}">
 
             @error('utilidad_producto')
             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                <div data-field="name" data-validator="notEmpty">{{ $message }}</div>
+                <div data-field="name" data-validator="notEmpty">{{  __('El campo utilidad es obligatorio.')  }}</div>
             </div>
             @enderror
         </div>
@@ -107,7 +107,7 @@
 
             @error('stock_min_producto')
             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                <div data-field="name" data-validator="notEmpty">{{ $message }}</div>
+                <div data-field="name" data-validator="notEmpty">{{  __('El campo stock min es obligatorio.')  }}</div>
             </div>
             @enderror
         </div>
@@ -122,7 +122,7 @@
 
             @error('interes_producto')
             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                <div data-field="name" data-validator="notEmpty">{{ $message }}</div>
+                <div data-field="name" data-validator="notEmpty">{{  __('El campo interes es obligatorio.')  }}</div>
             </div>
             @enderror
         </div>
