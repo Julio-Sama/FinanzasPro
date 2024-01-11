@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tipo;
 use App\Http\Requests\StoreTipoRequest;
 use App\Http\Requests\UpdateTipoRequest;
+use Illuminate\Support\Facades\Session;
 
 class TipoController extends Controller
 {
@@ -15,7 +16,11 @@ class TipoController extends Controller
      */
     public function index()
     {
-        //
+        return response(
+            view('tipos.index', [
+                'tipos' => Tipo::orderBy('nom_tipo', 'asc')->paginate(10)
+            ])
+        );
     }
 
     /**
@@ -25,7 +30,12 @@ class TipoController extends Controller
      */
     public function create()
     {
-        //
+        return response(
+            view('tipos.create', [
+                'tipo' => new Tipo(),
+                'view' => false
+            ])
+        );
     }
 
     /**
@@ -36,7 +46,14 @@ class TipoController extends Controller
      */
     public function store(StoreTipoRequest $request)
     {
-        //
+        $tipo = new Tipo();
+
+        $tipo->fill($request->validated());
+
+        if ($tipo->save()) {
+            return redirect()->route('tipos.index')->with('success', 'Tipo creado exitosamente.');
+        }
+        return redirect()->route('tipos.index')->with('Error', 'Error al crear el tipo.');
     }
 
     /**
@@ -47,7 +64,12 @@ class TipoController extends Controller
      */
     public function show(Tipo $tipo)
     {
-        //
+        return response(
+            view('tipos.show', [
+                'tipo' => $tipo,
+                'view' => true
+            ])
+        );
     }
 
     /**
@@ -58,7 +80,12 @@ class TipoController extends Controller
      */
     public function edit(Tipo $tipo)
     {
-        //
+        return response(
+            view('tipos.edit', [
+                'tipo' => $tipo,
+                'view' => false
+            ])
+        );
     }
 
     /**
@@ -70,17 +97,34 @@ class TipoController extends Controller
      */
     public function update(UpdateTipoRequest $request, Tipo $tipo)
     {
-        //
+        $tipo->fill($request->validated());
+
+        if ($tipo->save()) {
+            return redirect()->route('tipos.index')->with('success', 'Tipo de activo actualizado exitosamente.');
+        }
+
+        return redirect()->route('tipos.index')->with('Error', 'Error en actualizar tipo de activo.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tipo  $tipo
+     * @param  int $id_tipo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tipo $tipo)
+    public function destroy($id_tipo)
     {
-        //
+        $tipo = tipo::find($id_tipo);
+
+        if ($tipo->delete()) {
+            Session::flash('success', 'Tipo de activo eliminado exitosamente.');
+            return response([
+                'success' => true
+            ]);
+        }
+
+        return response([
+            'success' => false
+        ]);
     }
 }

@@ -8,6 +8,7 @@ use App\Models\Producto;
 use App\Models\Venta;
 use App\Http\Requests\StoreVentaRequest;
 use App\Http\Requests\UpdateVentaRequest;
+use App\Models\Proveedor;
 
 class VentaController extends Controller
 {
@@ -107,7 +108,19 @@ class VentaController extends Controller
      */
     public function show(Venta $venta)
     {
-        //
+        // $clientes = Cliente::orderBy('nom_cliente', 'asc')->get();
+        $venta->load('cliente', 'usuario', 'detalleProductoVenta.producto');
+
+        return response(
+            view('ventas.show',
+                [
+                    'venta' => $venta,
+                    'show' => true,
+                    'productos' => null,
+                    'clientes' => Cliente::orderBy('nom_cliente', 'asc')->get()
+                ]
+            )
+        );
     }
 
     /**

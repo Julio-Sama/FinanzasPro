@@ -1,19 +1,18 @@
 <div class="app-header header sticky">
     <div class="container-fluid main-container">
         <div class="d-flex">
-            <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-bs-toggle="sidebar"
-               href="javascript:void(0)"></a>
+            <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-bs-toggle="sidebar" href="javascript:void(0)"></a>
             <!-- sidebar-toggle-->
-            <a class="logo-horizontal" href="{{url('index')}}">
-                <img src="{{asset('build/assets/images/brand/logo.png')}}" class="header-brand-img main-logo"
-                     alt="Cañita logo">
-                <img src="{{asset('build/assets/images/brand/logo-light.png')}}" class="header-brand-img darklogo"
-                     alt="Cañita logo">
+            <a class="logo-horizontal" href="{{ url('index') }}">
+                <img src="{{ asset('build/assets/images/brand/logo.png') }}" class="header-brand-img main-logo"
+                    alt="Cañita logo">
+                <img src="{{ asset('build/assets/images/brand/logo-light.png') }}" class="header-brand-img darklogo"
+                    alt="Cañita logo">
             </a>
             <!-- LOGO -->
             <div class="main-header-center ms-3 d-none d-lg-block">
                 <input type="text" class="form-control" id="typehead" placeholder="Buscar resultados..."
-                       autocomplete="off">
+                    autocomplete="off">
                 <button class="btn px-2"><i class="fe fe-search" aria-hidden="true"></i></button>
             </div>
             <div class="d-flex order-lg-2 ms-auto header-right-icons">
@@ -32,17 +31,15 @@
                 </div>
                 <!-- SEARCH -->
                 <button class="navbar-toggler navresponsive-toggler d-lg-none ms-auto" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-4"
-                        aria-controls="navbarSupportedContent-4" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent-4"
+                    aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon fe fe-more-vertical"></span>
                 </button>
                 <div class="navbar navbar-collapse responsive-navbar p-0">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
                         <div class="d-flex order-lg-2">
                             <div class="dropdown d-lg-none d-flex">
-                                <a href="javascript:void(0)" class="nav-link icon"
-                                    data-bs-toggle="dropdown">
+                                <a href="javascript:void(0)" class="nav-link icon" data-bs-toggle="dropdown">
                                     <i class="fe fe-search"></i>
                                 </a>
                                 <div class="dropdown-menu header-search dropdown-menu-start">
@@ -63,19 +60,19 @@
                                         <h6 class="mt-1 mb-0 fs-14 fw-semibold text-dark"> Choose Language</h6>
                                     </div>
                                     <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"> <img
-                                            src="{{asset('build/assets/images/flag-images/3.png')}}" alt="img"
+                                            src="{{ asset('build/assets/images/flag-images/3.png') }}" alt="img"
                                             class="me-2 country language-img"> <span
                                             class="fs-13 text-wrap text-dark fw-semibold"> Germany</span> </a>
                                     <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"> <img
-                                            src="{{asset('build/assets/images/flag-images/5.png')}}" alt="img"
+                                            src="{{ asset('build/assets/images/flag-images/5.png') }}" alt="img"
                                             class="me-2 country language-img"> <span
                                             class="fs-13 text-wrap text-dark fw-semibold"> Russia</span> </a>
                                     <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"> <img
-                                            src="{{asset('build/assets/images/flag-images/6.png')}}" alt="img"
+                                            src="{{ asset('build/assets/images/flag-images/6.png') }}" alt="img"
                                             class="me-2 country language-img"> <span
                                             class="fs-13 text-wrap text-dark fw-semibold"> United Kingdom</span> </a>
                                     <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"> <img
-                                            src="{{asset('build/assets/images/flag-images/2.png')}}" alt="img"
+                                            src="{{ asset('build/assets/images/flag-images/2.png') }}" alt="img"
                                             class=" me-2 country language-img"> <span
                                             class="fs-13 text-wrap text-dark fw-semibold"> Canada</span> </a>
                                 </div>
@@ -100,18 +97,18 @@
                                     </div>
                                     <div class="header-dropdown-list message-menu">
                                         <div class="dropdown-item d-flex">
-                                            <a href="{{url('cart')}}" class="p-0">
+                                            <a href="{{ url('cart') }}" class="p-0">
                                                 <img
                                                     class="avatar avatar-lg br-7 me-3 align-self-center cover-image"
                                                     alt="product-image"
-                                                    src="{{asset('build/assets/images/products/7.jpg')}}">
+                                                    src="{{ asset('build/assets/images/products/7.jpg') }}">
                                             </a>
                                             <div class="wd-50p d-flex flex-column">
-                                                <a href="{{url('cart')}}" class="p-0 h6 text-dark fw-semibold mb-0">Flower
+                                                <a href="{{ url('cart') }}" class="p-0 h6 text-dark fw-semibold mb-0">Flower
                                                     pot home decores</a>
                                                 <span>Qty: 1</span>
                                                 <span>Status: <span class="text-success">In
-																	Stock</span></span>
+                 Stock</span></span>
                                             </div>
                                             <div class="my-auto ms-auto text-end">
                                                 <p class="fs-16 fw-semibold text-dark d-none d-sm-block px-3 mb-0">
@@ -120,14 +117,14 @@
                                             </div>
                                         </div>
                                         <div class="dropdown-item d-flex">
-                                            <a href="{{url('cart')}}" class="p-0">
+                                            <a href="{{ url('cart') }}" class="p-0">
                                                 <img
                                                     class="avatar avatar-lg br-7 me-3 align-self-center cover-image"
                                                     alt="product-image"
-                                                    src="{{asset('build/assets/images/products/4.jpg')}}">
+                                                    src="{{ asset('build/assets/images/products/4.jpg') }}">
                                             </a>
                                             <div class="wd-50p d-flex flex-column">
-                                                <a href="{{url('cart')}}" class="p-0 h6 text-dark fw-semibold mb-0">Smart
+                                                <a href="{{ url('cart') }}" class="p-0 h6 text-dark fw-semibold mb-0">Smart
                                                     watch</a>
                                                 <span>Qty: 3</span>
                                                 <span>Status: <span class="text-danger">Out Stock</span></span>
@@ -139,17 +136,17 @@
                                             </div>
                                         </div>
                                         <div class="dropdown-item d-flex">
-                                            <a href="{{url('cart')}}" class="p-0">
+                                            <a href="{{ url('cart') }}" class="p-0">
                                                 <img
                                                     class="avatar avatar-lg br-7 me-3 align-self-center cover-image"
                                                     alt="product-image"
-                                                    src="{{asset('build/assets/images/products/5.jpg')}}">
+                                                    src="{{ asset('build/assets/images/products/5.jpg') }}">
                                             </a>
                                             <div class="wd-50p d-flex flex-column">
-                                                <a href="{{url('cart')}}" class="p-0 h6 text-dark fw-semibold mb-0">Headphones</a>
+                                                <a href="{{ url('cart') }}" class="p-0 h6 text-dark fw-semibold mb-0">Headphones</a>
                                                 <span>Qty: 2</span>
                                                 <span>Status: <span class="text-success">In
-																	Stock</span></span>
+                 Stock</span></span>
                                             </div>
                                             <div class="my-auto ms-auto text-end">
                                                 <p class="fs-16 fw-semibold text-dark d-none d-sm-block px-3 mb-0">
@@ -158,18 +155,18 @@
                                             </div>
                                         </div>
                                         <div class="dropdown-item d-flex">
-                                            <a href="{{url('cart')}}" class="p-0">
+                                            <a href="{{ url('cart') }}" class="p-0">
                                                 <img
                                                     class="avatar avatar-lg br-7 me-3 align-self-center cover-image"
                                                     alt="product-image"
-                                                    src="{{asset('build/assets/images/products/30.jpg')}}">
+                                                    src="{{ asset('build/assets/images/products/30.jpg') }}">
                                             </a>
                                             <div class="wd-50p d-flex flex-column">
-                                                <a href="{{url('cart')}}" class="p-0 h6 text-dark fw-semibold mb-0">Furniture
+                                                <a href="{{ url('cart') }}" class="p-0 h6 text-dark fw-semibold mb-0">Furniture
                                                     (chair)</a>
                                                 <span>Qty: 1</span>
                                                 <span>Status: <span class="text-success">In
-																	Stock</span></span>
+                 Stock</span></span>
                                             </div>
                                             <div class="my-auto ms-auto text-end">
                                                 <p class="fs-16 fw-semibold text-dark d-none d-sm-block px-3 mb-0">
@@ -178,18 +175,18 @@
                                             </div>
                                         </div>
                                         <div class="dropdown-item d-flex border-bottom-0">
-                                            <a href="{{url('cart')}}" class="p-0">
+                                            <a href="{{ url('cart') }}" class="p-0">
                                                 <img
                                                     class="avatar avatar-lg br-7 me-3 align-self-center cover-image"
                                                     alt="product-image"
-                                                    src="{{asset('build/assets/images/products/8.jpg')}}">
+                                                    src="{{ asset('build/assets/images/products/8.jpg') }}">
                                             </a>
                                             <div class="wd-50p d-flex flex-column">
-                                                <a href="{{url('cart')}}" class="p-0 h6 text-dark fw-semibold mb-0">Running
+                                                <a href="{{ url('cart') }}" class="p-0 h6 text-dark fw-semibold mb-0">Running
                                                     Shoes</a>
                                                 <span>Qty: 4</span>
                                                 <span>Status: <span class="text-danger">In
-																	Stock</span></span>
+                 Stock</span></span>
                                             </div>
                                             <div class="my-auto ms-auto text-end">
                                                 <p class="fs-16 fw-semibold text-dark d-none d-sm-block px-3 mb-0">
@@ -201,7 +198,7 @@
                                     <div class="dropdown-divider m-0"></div>
                                     <div class="dropdown-footer d-felx justify-content-between align-items-center">
                                         <a class="btn btn-primary btn-pill btn-sm"
-                                            href="{{url('checkout')}}"><i class="fe fe-check-circle"></i>
+                                            href="{{ url('checkout') }}"><i class="fe fe-check-circle"></i>
                                             CHECKOUT</a>
                                         <span class="float-end fs-17 fw-semibold text-dark"><span
                                                 class="text-muted-dark">Total:</span> $4206</span>
@@ -225,7 +222,7 @@
                                         </h6>
                                     </div>
                                     <div class="notifications-menu header-dropdown-scroll">
-                                        <a class="dropdown-item border-bottom d-flex" href="{{url('notify-list')}}">
+                                        <a class="dropdown-item border-bottom d-flex" href="{{ url('notify-list') }}">
                                             <div>
                                                 <span
                                                     class="avatar avatar-md fs-20 brround fw-semibold text-center bg-primary-transparent"><i
@@ -238,7 +235,7 @@
                                                 <span class="notification-subtext">2m ago</span>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item border-bottom d-flex" href="{{url('notify-list')}}">
+                                        <a class="dropdown-item border-bottom d-flex" href="{{ url('notify-list') }}">
                                             <div>
                                                 <span
                                                     class="avatar avatar-md fs-20 brround fw-semibold text-danger bg-danger-transparent"><i
@@ -247,13 +244,13 @@
                                             <div class="wd-80p ms-3 my-auto">
                                                 <h5 class="text-dark mb-0 fw-semibold">Jackson Wisky
                                                     <span class="text-muted"> followed
-																		you</span>
+                  you</span>
                                                 </h5>
                                                 <span class="notification-subtext">15 min ago</span>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item border-bottom d-flex" href="{{url('notify-list')}}">
-															<span
+                                        <a class="dropdown-item border-bottom d-flex" href="{{ url('notify-list') }}">
+               <span
                                                                 class="avatar avatar-md fs-20 brround fw-semibold text-center bg-success-transparent"><i
                                                                     class="fe fe-check text-success"></i></span>
                                             <div class="wd-80p ms-3 my-auto">
@@ -264,7 +261,7 @@
                                                 <span class="notification-subtext">1 day ago</span>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item border-bottom d-flex" href="{{url('notify-list')}}">
+                                        <a class="dropdown-item border-bottom d-flex" href="{{ url('notify-list') }}">
                                             <div>
                                                 <span
                                                     class="avatar avatar-md fs-20 brround fw-semibold text-center bg-warning-transparent"><i
@@ -278,7 +275,7 @@
                                                 <span class="notification-subtext">15 min ago</span>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item d-flex" href="{{url('notify-list')}}">
+                                        <a class="dropdown-item d-flex" href="{{ url('notify-list') }}">
                                             <div>
                                                 <span
                                                     class="avatar avatar-md fs-20 brround fw-semibold text-center bg-info-transparent"><i
@@ -294,7 +291,7 @@
                                     </div>
                                     <div class="text-center dropdown-footer">
                                         <a class="btn btn-primary btn-sm btn-block text-center"
-                                           href="{{url('notify-list')}}">VIEW ALL NOTIFICATIONS</a>
+                                           href="{{ url('notify-list') }}">VIEW ALL NOTIFICATIONS</a>
                                     </div>
                                 </div>
                             </div> -->
@@ -310,9 +307,9 @@
                                     </div>
                                     <div class="message-menu message-menu-scroll">
                                         <a class="dropdown-item border-bottom d-flex align-items-center"
-                                           href="{{url('chat')}}">
+                                           href="{{ url('chat') }}">
                                             <img class="avatar avatar-md brround cover-image"
-                                                 src="{{asset('build/assets/images/users/male/28.jpg')}}"
+                                                 src="{{ asset('build/assets/images/users/male/28.jpg') }}"
                                                  alt="person-image">
                                             <div class="wd-90p ms-2">
                                                 <div class="d-flex">
@@ -325,10 +322,10 @@
                                             </div>
                                         </a>
                                         <a class="dropdown-item border-bottom d-flex align-items-center"
-                                           href="{{url('chat')}}">
+                                           href="{{ url('chat') }}">
                                             <img
                                                 class="avatar avatar-md brround me-3 align-self-center cover-image"
-                                                src="{{asset('build/assets/images/users/male/32.jpg')}}"
+                                                src="{{ asset('build/assets/images/users/male/32.jpg') }}"
                                                 alt="person-image">
                                             <div class="wd-90p">
                                                 <div class="d-flex">
@@ -341,9 +338,9 @@
                                             </div>
                                         </a>
                                         <a class="dropdown-item border-bottom d-flex align-items-center"
-                                           href="{{url('chat')}}">
+                                           href="{{ url('chat') }}">
                                             <img class="avatar avatar-md brround me-3 cover-image"
-                                                 src="{{asset('build/assets/images/users/female/21.jpg')}}"
+                                                 src="{{ asset('build/assets/images/users/female/21.jpg') }}"
                                                  alt="person-image">
                                             <div class="wd-90p">
                                                 <div class="d-flex">
@@ -355,9 +352,9 @@
                                                 <span class="fw-semibold">Added a file into <span class="text-info">Project Name</span></span>
                                             </div>
                                         </a>
-                                        <a class="dropdown-item d-flex align-items-center" href="{{url('chat')}}">
+                                        <a class="dropdown-item d-flex align-items-center" href="{{ url('chat') }}">
                                             <img class="avatar avatar-md brround me-3 cover-image"
-                                                 src="{{asset('build/assets/images/users/male/33.jpg')}}"
+                                                 src="{{ asset('build/assets/images/users/male/33.jpg') }}"
                                                  alt="person-image">
                                             <div class="wd-90p">
                                                 <div class="d-flex">
@@ -370,9 +367,9 @@
                                             </div>
                                         </a>
                                         <a class="dropdown-item border-bottom d-flex align-items-center border-bottom-0"
-                                           href="{{url('chat')}}">
+                                           href="{{ url('chat') }}">
                                             <img class="avatar avatar-md brround cover-image"
-                                                 src="{{asset('build/assets/images/users/male/8.jpg')}}"
+                                                 src="{{ asset('build/assets/images/users/male/8.jpg') }}"
                                                  alt="person-image">
                                             <div class="wd-90p ms-2">
                                                 <div class="d-flex">
@@ -389,7 +386,7 @@
 
                                     </div>
                                     <div class="text-center dropdown-footer">
-                                        <a class="btn btn-primary btn-sm btn-block text-center" href="{{url('chat')}}">MARK
+                                        <a class="btn btn-primary btn-sm btn-block text-center" href="{{ url('chat') }}">MARK
                                             ALL AS READ</a>
                                     </div>
                                 </div>
@@ -404,27 +401,28 @@
                             <!-- SIDE-MENU -->
                             <div class="dropdown d-flex profile-1">
                                 <a href="javascript:void(0)" data-bs-toggle="dropdown"
-                                   class="nav-link leading-none d-flex">
-                                    <img src="{{asset('build/assets/images/users/male/15.jpg')}}" alt="profile-user"
-                                         class="avatar  profile-user brround cover-image">
+                                    class="nav-link leading-none d-flex">
+                                    <img src="{{ asset('build/assets/images/users/male/15.jpg') }}"
+                                        alt="profile-user" class="avatar  profile-user brround cover-image">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"
-                                     data-bs-popper="none">
+                                    data-bs-popper="none">
                                     <div class="drop-heading">
                                         <div class="text-center">
                                             <h5 class="text-dark mb-0 fw-semibold">Julio</h5>
                                             <span class="text-muted fs-12">Administrador</span>
                                         </div>
                                     </div>
-                                    <a class="dropdown-item text-dark fw-semibold border-top" href="{{url('profile')}}">
+                                    <a class="dropdown-item text-dark fw-semibold border-top"
+                                        href="{{ url('profile') }}">
                                         <i class="dropdown-icon fe fe-user"></i> Perfil
                                     </a>
 
-                                    <a class="dropdown-item text-dark fw-semibold" href="{{url('settings')}}">
+                                    <a class="dropdown-item text-dark fw-semibold" href="{{ url('settings') }}">
                                         <i class="dropdown-icon fe fe-settings"></i>Configuración
                                     </a>
 
-                                    <a class="dropdown-item text-dark fw-semibold" href="{{url('login')}}">
+                                    <a class="dropdown-item text-dark fw-semibold" href="{{ url('login') }}">
                                         <i class="dropdown-icon fe fe-log-out"></i> Cerrar Sesión
                                     </a>
                                 </div>

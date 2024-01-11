@@ -4,19 +4,19 @@
 @endsection
 
 @section('content')
-    <form id="form_compra">
+    <form id="form_venta">
         <!-- PAGE HEADER -->
         <div class="page-header d-sm-flex d-block">
             <ol class="breadcrumb mb-sm-0 mb-3">
                 <!-- breadcrumb -->
                 <li class="breadcrumb-item"><a href="{{ url('index') }}">Inicio</a></li>
-                <li class="breadcrumb-item" aria-current="page">Compras</li>
+                <li class="breadcrumb-item" aria-current="page">Ventas</li>
                 <li class="breadcrumb-item active" aria-current="page">Ver</li>
             </ol><!-- End breadcrumb -->
             <div class="ms-auto">
                 <div>
-                    <a href="{{ route('compras.index') }}" class="btn btn-primary"><i class="bx bx-arrow-back"></i>
-                        Atrás</a>
+                    <a href="{{ route('ventas.index') }}" class="btn btn-primary"><i class="bx bx-plus"></i>
+                        Atras</a>
                 </div>
             </div>
         </div>
@@ -27,10 +27,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Ver compra</h3>
+                        <h3 class="card-title">Detalles de venta</h3>
                     </div>
                     <div class="card-body">
-                        @include('compras.form')
+                        @include('ventas.form')
                     </div>
                     <div class="card-footer">
 
@@ -38,14 +38,13 @@
                 </div>
             </div>
         </div>
-
     </form>
 @endsection
 
 @section('scripts')
     <script>
         $(document).ready(function() {
-            var form = $('#form_compra');
+            var form = $('#form_venta');
             var inputs = form.find('input');
             var selects = form.find('select');
             var textareas = form.find('textarea');
@@ -62,14 +61,13 @@
                 $(this).prop('disabled', true);
             });
 
-            cargarDetalles()
-
+            cargarDetalles();
         });
 
         function cargarDetalles() {
-            var compra = (@json($compra)) ? @json($compra) : null;
+            var venta = (@json($venta)) ? @json($venta) : false;
 
-            var detalles = compra.detalle_producto_compra;
+            var detalles = venta.detalle_producto_venta;
             var total = 0;
 
             // Limpiar tabla
@@ -77,8 +75,8 @@
 
             detalles.forEach(function(detalle) {
                 var producto = detalle.producto;
-                var cantidad = detalle.cant_detalle_compra;
-                var precio = detalle.precio_detalle_compra;
+                var cantidad = detalle.cant_detalle_venta;
+                var precio = detalle.precio_detalle_venta;
                 var subtotal = precio * cantidad;
 
                 var fila = '<tr>' +
@@ -90,15 +88,14 @@
                     '</tr>';
 
                 total += subtotal;
-
                 $('#tbody_productos').append(fila);
             });
 
-            $('#subtotal_compra').text(total.toFixed(2));
-            $('#iva_compra').text((total * 0.13).toFixed(2));
-            $('#total_compra').text((total * 1.13).toFixed(2));
+            $('#subtotal_venta').text(total.toFixed(2));
+            $('#iva_venta').text((total * 0.13).toFixed(2));
+            $('#total_venta').text((total * 1.13).toFixed(2));
 
-            console.log(detalles);
+            console.console.log(detalles);
         }
     </script>
 @endsection
