@@ -95,7 +95,7 @@
             $('#iva_venta').text((total * 0.13).toFixed(2));
             $('#total_venta').text((total * 1.13).toFixed(2));
 
-            console.console.log(detalles);
+
         }
     </script>
 @endsection

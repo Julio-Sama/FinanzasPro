@@ -97,8 +97,6 @@
             $('#subtotal_compra').text(total.toFixed(2));
             $('#iva_compra').text((total * 0.13).toFixed(2));
             $('#total_compra').text((total * 1.13).toFixed(2));
-
-            console.log(detalles);
         }
     </script>
 @endsection

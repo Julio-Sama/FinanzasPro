@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('styles')
-
 @endsection
 
 @section('content')
@@ -10,7 +9,7 @@
         <div class="page-header d-sm-flex d-block">
             <ol class="breadcrumb mb-sm-0 mb-3">
                 <!-- breadcrumb -->
-                <li class="breadcrumb-item"><a href="{{url('index')}}">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="{{ url('index') }}">Inicio</a></li>
                 <li class="breadcrumb-item" aria-current="page">Productos</li>
                 <li class="breadcrumb-item active" aria-current="page">Ver</li>
             </ol><!-- End breadcrumb -->
@@ -45,25 +44,25 @@
 
 @section('scripts')
     <script>
-        @if($view)
-        $(document).ready(function () {
-            var form = $('#form_producto');
-            var inputs = form.find('input');
-            var selects = form.find('select');
-            var textareas = form.find('textarea');
+        @if ($view)
+            $(document).ready(function() {
+                var form = $('#form_producto');
+                var inputs = form.find('input');
+                var selects = form.find('select');
+                var textareas = form.find('textarea');
 
-            inputs.each(function () {
-                $(this).prop('disabled', true);
-            });
+                inputs.each(function() {
+                    $(this).prop('disabled', true);
+                });
 
-            selects.each(function () {
-                $(this).prop('disabled', true);
-            });
+                selects.each(function() {
+                    $(this).prop('disabled', true);
+                });
 
-            textareas.each(function () {
-                $(this).prop('disabled', true);
+                textareas.each(function() {
+                    $(this).prop('disabled', true);
+                });
             });
-        });
         @endif
     </script>
 @endsection

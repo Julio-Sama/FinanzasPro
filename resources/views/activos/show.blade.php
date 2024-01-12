@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <form id="form_activo">
+    <form id="form_activo_a">
         <!-- PAGE HEADER -->
         <div class="page-header d-sm-flex d-block">
             <ol class="breadcrumb mb-sm-0 mb-3">
@@ -44,9 +44,10 @@
 
 @section('scripts')
     <script>
-
+        @if ($view)
+            console.log("Hola, estoy en la vista");
             $(document).ready(function() {
-                var form = $('#form_activo');
+                var form = $('#form_activo_a');
                 var inputs = form.find('input');
                 var selects = form.find('select');
                 var textareas = form.find('textarea');
@@ -63,7 +64,9 @@
                     $(this).prop('disabled', true);
                 });
 
+                console.log("Hola, estoy en la vista dentro del ready");
             });
-
+        @endif
+        console.log("Hola, estoy fuera de la vista");
     </script>
 @endsection
