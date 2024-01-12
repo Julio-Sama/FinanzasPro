@@ -36,42 +36,22 @@ class LoginController extends Controller
 
         Auth::login($usuario);
         // Redireccionar al usuario después del registro
-        return redirect(route('clientes'));
+        return redirect(route('login')) . with('success', 'Usuario registrado con éxito');
     }
 
     public function login(Request $request)
     {
-        // Verificar si el usuario existe
-        $usuario = Usuario::where('nick_usuario', $request->nick_usuario )->first();
-
-        if (!$usuario) {
-            return redirect(route('login'))->with('error', 'No existe el usuario.');
-        }
-
-        // Comparar contraseñas usando el método de hashing de Laravel
-        $plainPassword = $request->pass_usuario;
-        $hashedPassword = $usuario->pass_usuario;
-
-
-
-        if (Hash::check($plainPassword, $hashedPassword)) {
-            // Autenticación exitosa
-
-            $credentials = $request->only('nick_usuario', 'pass_usuario');
-            $remember = $request->has('remember');
-
-            if (Auth::attempt($credentials, $remember)) {
-                return redirect()->intended(route('index'))
-                    ->with('success', 'Inicio de sesión exitoso!');
+        $usuario = Usuario::where('nick_usuario', $request->nick_usuario)->first();
+        if ($usuario && Hash::check($request->pass_usuario, $usuario->pass_usuario)) {
+            Auth::login($usuario);
+            if (Auth::check()) {
+                // return 'Autenticado';
+                return redirect(route('index'));
             } else {
-                // dd(Auth::getLastAttempted());
-                return redirect(route('login'))
-                    ->with('error', 'Error en el inicio de sesión. [Aqui fallo]');
+                return back()->with('error', '');
             }
         } else {
-            // Contraseña incorrecta
-            return redirect(route('login'))
-                ->with('error', 'Error en el inicio de sesión!.');
+            return back()->with('error', 'Credenciales incorrectas');
         }
     }
 
@@ -85,4 +65,6 @@ class LoginController extends Controller
         return redirect(route('login'));
         // Redireccionar al usuario después del cierre de sesión
     }
+
+    protected $redirectTo = "/index";
 }
