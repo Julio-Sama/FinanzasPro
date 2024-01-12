@@ -17,15 +17,16 @@ return new class extends Migration
             $table->id('id_usuario');
             $table->string('nom_usuario', 50);
             $table->string('nick_usuario', 50);
-            $table->string('pass_usuario', 50);
+            $table->string('pass_usuario', 255);
             $table->unsignedBigInteger('id_rol');
+            $table->rememberToken();    
             $table->timestamps();
         });
 
         Schema::table('usuario', function (Blueprint $table) {
             $table->foreign('id_rol')->references('id_rol')->on('rol')->onDelete('cascade');
         });
-    }
+    }   
 
     /**
      * Reverse the migrations.
