@@ -32,6 +32,8 @@ use App\Http\Controllers\CompraController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ActivoController;
+use App\Http\Controllers\TipoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +69,10 @@ Route::resource('productos', ProductoController::class);
 Route::resource('compras', CompraController::class);
 
 Route::resource('ventas', VentaController::class);
+
+Route::resource('tipos', TipoController::class); // Tipo de activo
+Route::resource('activos', ActivoController::class); // Activo
+
 
 // Kardex
 Route::get('kardex', [ProductoController::class, 'kardex'])->name('kardex.index');

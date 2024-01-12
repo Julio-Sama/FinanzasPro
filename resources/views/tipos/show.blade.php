@@ -5,18 +5,18 @@
 @endsection
 
 @section('content')
-    <form id="form_producto">
+    <form id="form_tipo">
         <!-- PAGE HEADER -->
         <div class="page-header d-sm-flex d-block">
             <ol class="breadcrumb mb-sm-0 mb-3">
                 <!-- breadcrumb -->
                 <li class="breadcrumb-item"><a href="{{url('index')}}">Inicio</a></li>
-                <li class="breadcrumb-item" aria-current="page">Productos</li>
+                <li class="breadcrumb-item" aria-current="page">Tipos de activo</li>
                 <li class="breadcrumb-item active" aria-current="page">Ver</li>
             </ol><!-- End breadcrumb -->
             <div class="ms-auto">
                 <div>
-                    <a href="{{ route('productos.index') }}" class="btn btn-primary"><i class="bx bx-arrow-back"></i>
+                    <a href="{{ route('tipos.index') }}" class="btn btn-primary"><i class="bx bx-arrow-back"></i>
                         Atrás</a>
                 </div>
             </div>
@@ -28,10 +28,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Ver producto</h3>
+                        <h3 class="card-title">Ver Tipo</h3>
                     </div>
                     <div class="card-body">
-                        @include('productos.form')
+                        @include('tipos.form')
                     </div>
                     <div class="card-footer">
 
@@ -47,20 +47,10 @@
     <script>
         @if($view)
         $(document).ready(function () {
-            var form = $('#form_producto');
+            var form = $('#form_tipo');
             var inputs = form.find('input');
-            var selects = form.find('select');
-            var textareas = form.find('textarea');
 
             inputs.each(function () {
-                $(this).prop('disabled', true);
-            });
-
-            selects.each(function () {
-                $(this).prop('disabled', true);
-            });
-
-            textareas.each(function () {
                 $(this).prop('disabled', true);
             });
         });

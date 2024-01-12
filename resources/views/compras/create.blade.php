@@ -12,7 +12,7 @@
             <ol class="breadcrumb mb-sm-0 mb-3">
                 <!-- breadcrumb -->
                 <li class="breadcrumb-item"><a href="{{url('index')}}">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Compras</li>
+                <li class="breadcrumb-item" aria-current="page">Compras</li>
                 <li class="breadcrumb-item active" aria-current="page">Nuevo</li>
             </ol><!-- End breadcrumb -->
             <div class="ms-auto">

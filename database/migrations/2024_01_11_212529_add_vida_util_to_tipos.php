@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tipos', function (Blueprint $table) {
-            $table->id('id_tipo');
-            $table->string('nom_tipo', 50);
-            $table->timestamps();
+        Schema::table('tipos', function (Blueprint $table) {
+            $table->integer('vida_util')
+            ->after('nom_tipo')
+            ->default(0);
         });
     }
 
@@ -27,6 +27,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipos');
+        Schema::table('tipos', function (Blueprint $table) {
+            //
+        });
     }
 };
