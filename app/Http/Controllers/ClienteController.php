@@ -50,7 +50,7 @@ class ClienteController extends Controller
         $cliente = new Cliente();
         $cliente->cod_cliente = $this->generarCodigoCliente();
         $cliente->fill($request->validated());
-        $cliente->id_usuario = '13';
+        $cliente->id_usuario = '1';
 
         if($cliente->save()){
             return redirect()

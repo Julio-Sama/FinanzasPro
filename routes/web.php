@@ -33,6 +33,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ActivoController;
+use App\Http\Controllers\RolController;
 use App\Http\Controllers\TipoController;
 
 /*
@@ -47,8 +48,8 @@ use App\Http\Controllers\TipoController;
 */
 
 /* Rutas para el login */
-Route::view('/login', "login")->name('login');
-Route::view('/registro', "register")->name('registro');
+Route::view('/login', 'login')->name('login');
+Route::view('/registro', 'register')->name('registro');
 
 Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
 Route::post('/iniciar-sesion', [LoginController::class, 'login'])->name('iniciar-sesion');
@@ -72,6 +73,7 @@ Route::resource('ventas', VentaController::class);
 
 Route::resource('tipos', TipoController::class); // Tipo de activo
 Route::resource('activos', ActivoController::class); // Activo
+// Route::get('roles', RolController::class); // Rol
 
 
 // Kardex

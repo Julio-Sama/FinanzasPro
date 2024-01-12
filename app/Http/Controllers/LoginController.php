@@ -9,61 +9,76 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
+    public function create()
+    {
+        //
+        return response(
+            view('usuarios.create', [
+                'usuario' => new Usuario(),
+                'view' => false
+            ])
+        );
+    }
+
     public function register(Request $request)
     {
+
         // Lógica de registro aquí
         $usuario = new Usuario();
         $usuario->nom_usuario = $request->nom_usuario;
         $usuario->nick_usuario = $request->nick_usuario;
         $usuario->pass_usuario = Hash::make($request->pass_usuario);
 
+        // Quiero guardar por defecto el rol de usuario "Empleado" que es el id_rol = 2
+        $usuario->id_rol = 2;
+
         $usuario->save();
 
         Auth::login($usuario);
         // Redireccionar al usuario después del registro
-        return redirect(route('login'));
+        return redirect(route('clientes'));
     }
 
     public function login(Request $request)
     {
-        $usuario = Usuario::where('nick_usuario', $request->nick_usuario)->first();
-        // Lógica de autenticación aquí
-        
-        $hashedPassword = $usuario->pass_usuario; // La contraseña encriptada almacenada en la base de datos
-        $plainPassword = $request->pass_usuario; // La contraseña en texto plano que el usuario ha enviado
-     
-        $credentials = $request->only('nick_usuario', 'pass_usuario');
+        // Verificar si el usuario existe
+        $usuario = Usuario::where('nick_usuario', $request->nick_usuario )->first();
 
-       // $credentials = [ 
-       //     "nick_usuario" => $request->nick_usuario, 
-       //     "pass_usuario" => $request->pass_usuario, 
-        //"active" => true 
-       // ];
-        $remember = ($request->has('remember') ? true : false);
-
-        if (Auth::validate($credentials)) {
-            // Authentication was successful...
-
-            error_log(print_r($plainPassword, true));
-
-            $request->session()->regenerate();
-            return redirect()->intended(route('index'))->with('success', 'Inicio de sesión exitoso!');
-       
-        } else {
-            // Authentication was unsuccessful...
-
-            error_log(print_r($hashedPassword, true));
-
-            return redirect(route('login'))->with('error', 'Error en el inicio de sesión.');
+        if (!$usuario) {
+            return redirect(route('login'))->with('error', 'No existe el usuario.');
         }
 
-        // Redireccionar al usuario después del inicio de sesión
+        // Comparar contraseñas usando el método de hashing de Laravel
+        $plainPassword = $request->pass_usuario;
+        $hashedPassword = $usuario->pass_usuario;
+
+
+
+        if (Hash::check($plainPassword, $hashedPassword)) {
+            // Autenticación exitosa
+
+            $credentials = $request->only('nick_usuario', 'pass_usuario');
+            $remember = $request->has('remember');
+
+            if (Auth::attempt($credentials, $remember)) {
+                return redirect()->intended(route('index'))
+                    ->with('success', 'Inicio de sesión exitoso!');
+            } else {
+                // dd(Auth::getLastAttempted());
+                return redirect(route('login'))
+                    ->with('error', 'Error en el inicio de sesión. [Aqui fallo]');
+            }
+        } else {
+            // Contraseña incorrecta
+            return redirect(route('login'))
+                ->with('error', 'Error en el inicio de sesión!.');
+        }
     }
 
     public function logout(Request $request)
     {
         // Lógica de cierre de sesión aquí
-        Auth::logout(); 
+        Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 

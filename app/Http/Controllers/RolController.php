@@ -15,7 +15,7 @@ class RolController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -25,7 +25,7 @@ class RolController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -36,7 +36,7 @@ class RolController extends Controller
      */
     public function store(StoreRolRequest $request)
     {
-        //
+
     }
 
     /**
@@ -47,7 +47,7 @@ class RolController extends Controller
      */
     public function show(Rol $rol)
     {
-        //
+
     }
 
     /**
@@ -58,7 +58,7 @@ class RolController extends Controller
      */
     public function edit(Rol $rol)
     {
-        //
+
     }
 
     /**
@@ -70,7 +70,7 @@ class RolController extends Controller
      */
     public function update(UpdateRolRequest $request, Rol $rol)
     {
-        //
+
     }
 
     /**
