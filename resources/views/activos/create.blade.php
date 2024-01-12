@@ -64,25 +64,5 @@
 
         let tipo_activo_seleccionado = null;
 
-
-
-        $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            });
-
-            // Eliminar errores de validacion
-            $('input').on('keyup', function() {
-                $(this).removeClass('is-invalid');
-            });
-
-            $('select').on('change', function() {
-                $(this).removeClass('is-invalid');
-            });
-
-
-        });
     </script>
 @endsection

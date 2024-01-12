@@ -80,8 +80,7 @@ class ActivoController extends Controller
             view('activos.show', [
                 'activo' => $activo,
                 'tipos' => $tipos,
-                'view' => true,
-                'show' => true,
+                'view' => true
             ])
         );
     }
