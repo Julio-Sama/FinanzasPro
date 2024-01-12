@@ -14,6 +14,7 @@ class Tipo extends Model
     protected $primaryKey = 'id_tipo';
 
     protected $fillable = [
-        'nom_tipo'
+        'nom_tipo',
+        'vida_util'
     ];
 }

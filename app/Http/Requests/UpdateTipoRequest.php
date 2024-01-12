@@ -24,7 +24,8 @@ class UpdateTipoRequest extends FormRequest
     public function rules()
     {
         return [
-            'nom_tipo' => 'required'
+            'nom_tipo' => 'required',
+            'vida_util' => 'required'
         ];
     }
 }

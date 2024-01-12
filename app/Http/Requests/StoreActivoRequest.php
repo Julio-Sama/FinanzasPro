@@ -13,7 +13,7 @@ class StoreActivoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,15 @@ class StoreActivoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'descrip_activo' => 'required',
+            'marca_activo' => 'required',
+            'modelo_activo' => 'required',
+            'serie_activo' => 'required',
+            'color_activo' => 'required',
+            'fech_compra_activo' => 'required',
+            'vida_util_activo' => 'required',
+            'costo_compra_activo' => 'required',
+            'id_tipo' => 'required'
         ];
     }
 }

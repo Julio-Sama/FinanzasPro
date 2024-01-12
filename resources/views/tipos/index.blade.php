@@ -9,7 +9,7 @@
         <ol class="breadcrumb mb-sm-0 mb-3">
             <!-- breadcrumb -->
             <li class="breadcrumb-item"><a href="{{url('index')}}">Inicio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Tipos de activo</li>
+            <li class="breadcrumb-item active" aria-current="page">Tipos de Activo</li>
         </ol><!-- End breadcrumb -->
         <div class="ms-auto">
             <div>
@@ -41,6 +41,7 @@
                         <tr>
                             <th>#</th>
                             <th>Nombre</th>
+                            <th>Vida util</th>
                             <th>Acciones</th>
                         </tr>
                         </thead>
@@ -50,6 +51,7 @@
                             <tr>
                                 <td>{{ $tipo->id_tipo }}</td>
                                 <td>{{ $tipo->nom_tipo }}</td>
+                                <td>{{ $tipo->vida_util }} años</td>
                                 <td>
                                     <div class="btn-group">
                                         <a class="btn" data-bs-toggle="dropdown" aria-expanded="false">
