@@ -64,8 +64,8 @@
                                             </a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="javascript:"
-                                               onclick="cargar_datos_eliminar_cliente('{{ $cliente->cod_cliente }}', '{{ $cliente->id_cliente }}')"
-                                               data-bs-toggle="modal" data-bs-target="#modal_eliminar_cliente">
+                                            onclick="cargar_datos_eliminar_cliente('{{ $cliente->cod_cliente }}', '{{ $cliente->id_cliente }}')"
+                                            data-bs-toggle="modal" data-bs-target="#modal_eliminar_cliente">
                                                 <i class='bx bx-trash'></i> Eliminar
                                             </a>
                                         </div>

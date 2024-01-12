@@ -31,6 +31,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\CompraController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ActivoController;
 use App\Http\Controllers\TipoController;
 
@@ -45,7 +46,15 @@ use App\Http\Controllers\TipoController;
 |
 */
 
+/* Rutas para el login */
+Route::view('/login', "login")->name('login');
+Route::view('/registro', "register")->name('registro');
 
+Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
+Route::post('/iniciar-sesion', [LoginController::class, 'login'])->name('iniciar-sesion');
+Route::get('/cerrar-sesion', [LoginController::class, 'logout'])->name('cerrar-sesion');
+
+/* Rutas para el dashboard */
 Route::get('/', Index::class);
 Route::get('index', Index::class);
 

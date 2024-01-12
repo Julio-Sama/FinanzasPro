@@ -71,8 +71,8 @@
                                             </a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item" href="javascript:"
-                                               onclick="cargar_datos_eliminar_proveedor('{{ $proveedor->nom_proveedor }}', '{{ $proveedor->id_proveedor }}')"
-                                               data-bs-toggle="modal" data-bs-target="#modal_eliminar_proveedor">
+                                                onclick="cargar_datos_eliminar_proveedor('{{ $proveedor->nom_proveedor }}', '{{ $proveedor->id_proveedor }}')"
+                                                data-bs-toggle="modal" data-bs-target="#modal_eliminar_proveedor">
                                                 <i class='bx bx-trash'></i> Eliminar
                                             </a>
                                         </div>
@@ -126,7 +126,7 @@
         const tabla_proveedores = $('#tabla_proveedores');
 
         $(document).ready(function () {
-            btn_eliminar_proveedor.on('click', function () {
+            btn_eliminar_proveedor.on('click', function () {    
                 var id_proveedor = input_id_proveedor.val();
 
                 $.ajax({
