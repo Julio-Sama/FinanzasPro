@@ -65,7 +65,16 @@ Route::get('/', function () {
 
 /* Rutas para el dashboard */
 // Route::get('/', Index::class);
-Route::get('index', Index::class)->name('index');
+// Route::middleware
+Route::middleware(['role:Administrador'])->group(function () {
+    Route::get('/index', Index::class)->name('index');
+});
+
+Route::middleware(['role:Empleado'])->group(function () {
+    Route::get('/index', Index::class)->name('index');
+});
+
+// Route::get('index', Index::class)->name('index');
 
 Route::resource('clientes', ClienteController::class);
 

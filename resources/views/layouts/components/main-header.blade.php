@@ -399,34 +399,39 @@
                                 </a>
                             </div> -->
                             <!-- SIDE-MENU -->
-                            <div class="dropdown d-flex profile-1">
-                                <a href="javascript:void(0)" data-bs-toggle="dropdown"
-                                    class="nav-link leading-none d-flex">
-                                    <img src="{{ asset('build/assets/images/users/male/15.jpg') }}"
-                                        alt="profile-user" class="avatar  profile-user brround cover-image">
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"
-                                    data-bs-popper="none">
-                                    <div class="drop-heading">
-                                        <div class="text-center">
-                                            <h5 class="text-dark mb-0 fw-semibold">Julio</h5>
-                                            <span class="text-muted fs-12">Administrador</span>
+                            @auth
+                                <div class="dropdown d-flex profile-1">
+                                    <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                                        class="nav-link leading-none d-flex">
+                                        <img src="{{ asset('build/assets/images/users/male/15.jpg') }}"
+                                            alt="profile-user" class="avatar profile-user brround cover-image">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow"
+                                        data-bs-popper="none">
+                                        <div class="drop-heading">
+                                            <div class="text-center">
+                                                <h5 class="text-dark mb-0 fw-semibold">{{ Auth::usuario()->nom_usuario }}
+                                                </h5>
+                                                <span class="text-muted fs-12">
+                                                    {{ Auth::usuario()->rol->nombre_rol }}
+                                                    <!-- Asumiendo que tienes una relación con el modelo Rol -->
+                                                </span>
+                                            </div>
                                         </div>
+                                        <a class="dropdown-item text-dark fw-semibold border-top"
+                                            href="{{ url('profile') }}">
+                                            <i class="dropdown-icon fe fe-user"></i> Perfil
+                                        </a>
+                                        <a class="dropdown-item text-dark fw-semibold" href="{{ url('settings') }}">
+                                            <i class="dropdown-icon fe fe-settings"></i> Configuración
+                                        </a>
+                                        <a class="dropdown-item text-dark fw-semibold" href="{{ url('logout') }}">
+                                            <i class="dropdown-icon fe fe-log-out"></i> Cerrar Sesión
+                                        </a>
                                     </div>
-                                    <a class="dropdown-item text-dark fw-semibold border-top"
-                                        href="{{ url('profile') }}">
-                                        <i class="dropdown-icon fe fe-user"></i> Perfil
-                                    </a>
-
-                                    <a class="dropdown-item text-dark fw-semibold" href="{{ url('settings') }}">
-                                        <i class="dropdown-icon fe fe-settings"></i>Configuración
-                                    </a>
-
-                                    <a class="dropdown-item text-dark fw-semibold" href="{{ url('login') }}">
-                                        <i class="dropdown-icon fe fe-log-out"></i> Cerrar Sesión
-                                    </a>
                                 </div>
-                            </div>
+                            @endauth
+
                         </div>
                     </div>
                 </div>
