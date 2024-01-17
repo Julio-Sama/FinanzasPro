@@ -47,6 +47,10 @@ class Usuario extends Authenticatable
         return $this->belongsTo(Rol::class, 'id_rol', 'id_rol');
     }
 
+    public function idAdmin(){
+        return $this->id_rol === 'Administrador';
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

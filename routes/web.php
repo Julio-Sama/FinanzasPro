@@ -31,6 +31,8 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ActivoController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\RolController;
 use App\Http\Controllers\TipoController;
 
@@ -66,12 +68,16 @@ Route::get('/', function () {
 /* Rutas para el dashboard */
 // Route::get('/', Index::class);
 // Route::middleware
-Route::middleware(['role:Administrador'])->group(function () {
-    Route::get('/index', Index::class)->name('index');
+// Route::middleware(['auth', 'role:Administrador'])->group(function () {
+//     Route::get('/index', Index::class)->name('index');
+// });
+
+Route::middleware(['auth','App\Http\Middleware\CheckRole:1'])->group(function () {
+    Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
 });
 
-Route::middleware(['role:Empleado'])->group(function () {
-    Route::get('/index', Index::class)->name('index');
+Route::middleware(['auth','App\Http\Middleware\CheckRole:2'])->group(function () {
+    Route::get('/index', 'EmployeeController@dashboard')->name('employee.dashboard');
 });
 
 // Route::get('index', Index::class)->name('index');

@@ -12,15 +12,16 @@ class CheckRole
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
-     * @param  string  $role
+     * @param  string  $roles
      * @return mixed
      */
-    public function handle($request, Closure $next, $role)
+    public function handle($request, Closure $next, ...$roles)
     {
-        if (Auth::check() && Auth::usuario()->hasRole($role)) {
-            return $next($request);
+
+        if (!in_array($request->user()->id_rol, $roles)) {
+            return redirect(route('login'))->with('error', 'No tienes permisos para acceder a esta página');
         }
 
-        return redirect('/');
+        return $next($request);
     }
 }

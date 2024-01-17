@@ -27,6 +27,7 @@ class UpdateUsuarioRequest extends FormRequest
             'nom_usuario' => 'required|max:50',
             'nick_usuario' => 'required|max:50',
             'pass_usuario' => 'required|max:255',
+            'id_rol' => 'required|integer',
         ];
     }
 }
