@@ -410,10 +410,10 @@
                                         data-bs-popper="none">
                                         <div class="drop-heading">
                                             <div class="text-center">
-                                                <h5 class="text-dark mb-0 fw-semibold">{{ Auth::usuario()->nom_usuario }}
+                                                <h5 class="text-dark mb-0 fw-semibold">{{ Auth::user()->nom_usuario }}
                                                 </h5>
                                                 <span class="text-muted fs-12">
-                                                    {{ Auth::usuario()->rol->nombre_rol }}
+                                                    {{ Auth::user()->rol->nombre_rol }}
                                                     <!-- Asumiendo que tienes una relación con el modelo Rol -->
                                                 </span>
                                             </div>
@@ -425,7 +425,7 @@
                                         <a class="dropdown-item text-dark fw-semibold" href="{{ url('settings') }}">
                                             <i class="dropdown-icon fe fe-settings"></i> Configuración
                                         </a>
-                                        <a class="dropdown-item text-dark fw-semibold" href="{{ url('logout') }}">
+                                        <a class="dropdown-item text-dark fw-semibold" href="{{ url('/cerrar-sesion') }}">
                                             <i class="dropdown-icon fe fe-log-out"></i> Cerrar Sesión
                                         </a>
                                     </div>

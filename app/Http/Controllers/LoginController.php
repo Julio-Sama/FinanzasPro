@@ -44,10 +44,10 @@ class LoginController extends Controller
                 // Verificar el rol del usuario y redireccionar en consecuencia
                 if ($usuario->id_rol == 1) {
                     // Administrador
-                    return redirect(route('admin.dashboard'));
+                    return redirect(route('admin'));
                 } elseif ($usuario->id_rol == 2) {
                     // Empleado
-                    return redirect(route('employee.dashboard'));
+                    return redirect(route('index'));
                 } else {
                     return back()->with('error', 'Rol no válido');
                 }
@@ -59,10 +59,12 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
+        // Lógica de cierre de sesión aquí
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
         return redirect(route('login'));
+
     }
 }

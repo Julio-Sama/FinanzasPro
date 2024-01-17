@@ -77,7 +77,7 @@ Route::middleware(['auth','App\Http\Middleware\CheckRole:1'])->group(function ()
 });
 
 Route::middleware(['auth','App\Http\Middleware\CheckRole:2'])->group(function () {
-    Route::get('/index', 'EmployeeController@dashboard')->name('employee.dashboard');
+    Route::get('/index', Index::class)->name('index');
 });
 
 // Route::get('index', Index::class)->name('index');
